@@ -82,6 +82,24 @@ var specialCharacters = [
 ];
 var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
+// Function to generate password
+
+function generatePassword() {
+  var passLength = parseInt(prompt("How long should your password be?"));
+
+  // choose lowercase, uppercase, numeric, and/or special characters
+
+  var hasUpperCase = confirm(
+    "Would you like to use uppercase letters in your password?"
+  );
+  var hasLowerCase = confirm(
+    "Would you like to use lowercase letters in your password?"
+  );
+  var hasNumbers = confirm("Would you like to use numbers in your password?");
+  var hasSpecialCharacters = confirm(
+    "Would you like to use special characters in your password?"
+  );
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
