@@ -110,6 +110,31 @@ function generatePassword() {
   ) {
     alert("You need to select at least one special character");
   }
+
+  var possibleCharacters = [];
+
+  if (hasUpperCase === true) {
+    possibleCharacters = possibleCharacters.concat(upperCase);
+  }
+  if (hasLowerCase === true) {
+    possibleCharacters = possibleCharacters.concat(lowerCase);
+  }
+  if (hasSpecialCharacters === true) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
+  }
+  if (hasNumbers === true) {
+    possibleCharacters = possibleCharacters.concat(numbersArray);
+  }
+  var newPassword = [];
+  for (var i = 0; i < passLength; i++) {
+    var randomP = Math.floor(Math.random() * possibleCharacters.length);
+
+    var actualReturn = possibleCharacters[randomP];
+    newPassword.push(actualReturn);
+    // console.log(actualReturn);
+
+    // console.log(possibleCharacters[randomP]);
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
