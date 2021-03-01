@@ -99,6 +99,17 @@ function generatePassword() {
   var hasSpecialCharacters = confirm(
     "Would you like to use special characters in your password?"
   );
+
+  // at least one character type should be selectd
+
+  if (
+    hasUpperCase == false &&
+    hasLowerCase == false &&
+    hasNumbers == false &&
+    hasSpecialCharacters == false
+  ) {
+    alert("You need to select at least one special character");
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
