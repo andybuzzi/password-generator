@@ -135,6 +135,12 @@ function generatePassword() {
 
     // console.log(possibleCharacters[randomP]);
   }
+  var joinedPass = newPassword.join("");
+
+  console.log(joinedPass);
+
+  document.getElementById("password").innerHTML = joinedPass;
+  return joinedPass;
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
