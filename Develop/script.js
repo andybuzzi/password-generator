@@ -87,6 +87,13 @@ var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 function generatePassword() {
   var passLength = parseInt(prompt("How long should your password be?"));
 
+  // conditional for the password lengh
+
+  if (passLength !== passLength || passLength < 8 || passLength > 128) {
+    alert("Invalid number inserted. Please choose a number between 8 and 128");
+    return;
+  }
+
   // choose lowercase, uppercase, numeric, and/or special characters
 
   var hasUpperCase = confirm(
